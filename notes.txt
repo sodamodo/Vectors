@@ -1,0 +1,19 @@
+the variable "var" is either 5 or not 5, this determines whether the KML output is "clampToGround" or "absolute", this seems to be the "ignore height" option in GUI
+
+if the variable "unitsVariable" is 1 then units are m/s, otherwise mph. I don't think this matters during the actual calculations.
+
+the checkVars are for differentiating which of the three vectors to write in.
+
+BE SURE TO INCLUDE CODE THAT CHECKS TO MAKE SURE UPLOADED FILE IS EITHER A .XLS OR .TXT
+
+Primary function parameters:
+    openFilePath
+    saveFilePath
+    massInput(in kilos)
+    var (calculates with altitude if var is 5, doesn't otherwise)
+    checkVar (1 to calc velocity vector)
+    checkVar2 (1 to calc Coordinates file)
+    checkVar3 (1 to calc acceleration vector)
+    unitsVariable (1 for m/s)
+    checkVar4 (1 to calc force vector)
+    fileVar(1 for .txt, 3 for .xls)
