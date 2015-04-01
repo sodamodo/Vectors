@@ -7,15 +7,15 @@
 
 	<body>
 		<!-- List of uploaded documents -->
-{#		{% if documents %}#}
-{#			<ul>#}
-{#			{% for document in documents %}#}
-{#				<li><a href="{{ document.docfile.url }}">{{ document.docfile.name }}</a></li>#}
-{#			{% endfor %}#}
-{#			</ul>#}
-{#		{% else %}#}
-{#			<p>No documents.</p>#}
-{#		{% endif %}#}
+		{% if documents %}
+			<ul>
+			{% for document in documents %}
+				<li><a href="{{ document.docfile.url }}">{{ document.docfile.name }}</a></li>
+			{% endfor %}
+			</ul>
+		{% else %}
+			<p>No documents.</p>
+		{% endif %}
 
 		<!-- Upload form. Note enctype attribute! -->
 		<form action="{% url "upload" %}" method="post" enctype="multipart/form-data">

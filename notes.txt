@@ -17,3 +17,8 @@ Primary function parameters:
     unitsVariable (1 for m/s)
     checkVar4 (1 to calc force vector)
     fileVar(1 for .txt, 3 for .xls)
+
+
+check out this KML/KMZ middleware on djangosnippets
+How does one reference custom middleware??????
+going to need to zip before download in case they want coords file

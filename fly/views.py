@@ -1,11 +1,12 @@
 from django.shortcuts import render
 from django.template import RequestContext
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, HttpResponse
 from django.core.urlresolvers import reverse
-
+import os
 from fly.models import Document
 from fly.forms import DocumentForm
 from gps import runCode
+from Vectors.settings import BASE_DIR
 
 
 
@@ -32,6 +33,7 @@ def upload(request):
                 wrongfiletag = "Sorry you can only upload Excel files or Text files"
                 form = DocumentForm()
                 documents = Document.objects.all()
+                print("hub")
                 return render(
                         request,
                         'upload.html',
@@ -54,12 +56,15 @@ def upload(request):
             mass = float(request.POST['mass'])
             input_path = newdoc.docfile.path
             output_path = ""
-            fileVar = 1 # Need to write in the autocheck later
             runCode(input_path, output_path, mass, trajectory, velocity, coordinates, acceleration, units, force, fileVar)
             # Redirect to the document list after POST
-            return HttpResponseRedirect(reverse('fly.views.upload'))
+            kml_data = open(os.path.join(BASE_DIR, '_GoogleEarth_0_.kml'), "rb")
+            response = HttpResponse(kml_data, content_type='application/vnd.google-earth.kml+xml')
+            response['Content-Disposition'] = 'attachment; filename=processed.kml' # make custom download name
+            return response
+            # return HttpResponseRedirect(reverse('fly.views.upload'))
     else:
-        form = DocumentForm() # A empty, unbound form
+        form = DocumentForm()  # A empty, unbound form
 
     # Load documents for the list page
     documents = Document.objects.all()
