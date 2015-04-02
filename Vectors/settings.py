@@ -38,6 +38,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'fly',
     'registration',
+    'crispy_forms'
 )
 
 MIDDLEWARE_CLASSES = (
@@ -119,3 +120,5 @@ LOGOUT_URL = '/accounts/logout/'
 EMAIL_BACKEND = 'django.core.mail.backends.dummy.EmailBackend'
 
 REGISTRATION_OPEN = True #True means you can register, false is the opposite.
+
+CRISPY_TEMPLATE_PACK = "bootstrap3"

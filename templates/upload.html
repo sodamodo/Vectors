@@ -1,6 +1,8 @@
+{% load crispy_forms_tags %}
 <!DOCTYPE html>
 <html>
 	<head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 		<meta charset="utf-8">
 		<title>Minimal Django File Upload Example</title>	
 	</head>
@@ -16,18 +18,19 @@
 		{% else %}
 			<p>No documents.</p>
 		{% endif %}
-
+{#<div style="margin-left:auto;margin-right:auto;"></div>#}
 		<!-- Upload form. Note enctype attribute! -->
-		<form action="{% url "upload" %}" method="post" enctype="multipart/form-data">
+{#		<form action="{% url "upload" %}" method="post" enctype="multipart/form-data">#}
 			{% csrf_token %}
-			<p>{{ form.non_field_errors }}</p>
-			<p>{{ form.docfile.label_tag }} {{ form.docfile.help_text }}</p>
-			<p>
-				{{ form.docfile.errors }}
-				{{ form }}
-			</p>
-			<p><input type="submit" value="Upload" /></p>
+{#			<p>{{ form.non_field_errors }}</p>#}
+{#			<p>{{ form.docfile.label_tag }} {{ form.docfile.help_text }}</p>#}
+{#			<p>#}
+{#				{{ form.docfile.errors }}#}
+
+				{% crispy form %}
+{#			</p>#}
+{#			<p><input type="submit" value="Upload" /></p>#}
             {{ wrongfile }}
-		</form>
-		
+{#		</form>#}
+{#		<script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>#}
 	</body>
