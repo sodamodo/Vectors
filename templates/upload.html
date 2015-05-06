@@ -1,36 +1,192 @@
 {% load crispy_forms_tags %}
 <!DOCTYPE html>
 <html>
-	<head>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-		<meta charset="utf-8">
-		<title>Minimal Django File Upload Example</title>	
-	</head>
+<head>
+    <link rel="stylesheet" href=css.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 
-	<body>
-		<!-- List of uploaded documents -->
-		{% if documents %}
-			<ul>
-			{% for document in documents %}
-				<li><a href="{{ document.docfile.url }}">{{ document.docfile.name }}</a></li>
-			{% endfor %}
-			</ul>
-		{% else %}
-			<p>No documents.</p>
-		{% endif %}
-{#<div style="margin-left:auto;margin-right:auto;"></div>#}
-		<!-- Upload form. Note enctype attribute! -->
-{#		<form action="{% url "upload" %}" method="post" enctype="multipart/form-data">#}
-			{% csrf_token %}
-{#			<p>{{ form.non_field_errors }}</p>#}
-{#			<p>{{ form.docfile.label_tag }} {{ form.docfile.help_text }}</p>#}
-{#			<p>#}
-{#				{{ form.docfile.errors }}#}
+    <meta charset="utf-8">
+    <title>Minimal Django File Upload Example</title>
+</head>
 
-				{% crispy form %}
-{#			</p>#}
-{#			<p><input type="submit" value="Upload" /></p>#}
-            {{ wrongfile }}
-{#		</form>#}
-{#		<script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>#}
-	</body>
+<body>
+
+
+<h1><center>Hellloooooo</center></h1>
+
+<form id="id-exampleForm"  class="form-horizontal" method="post" enctype="multipart/form-data"><input type='hidden' name='csrfmiddlewaretoken' value='BDn9udiOP9M6dil3BRQDhWjj0ZMaaxai'/>
+<fieldset>
+
+<!-- Form Name -->
+<legend>Converter</legend>
+
+<!-- File Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="docfile">Select A File</label>
+  <div class="col-md-4">
+    <input id="docfile" name="docfile" class="input-file" type="file">
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="mass">Mass (kg)</label>
+  <div class="col-md-2">
+  <input id="mass" name="mass" type="text" placeholder="" class="form-control input-md" required="">
+
+  </div>
+</div>
+
+<!-- Multiple Checkboxes -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="checkboxes"></label>
+  <div class="col-md-4">
+  <div class="checkbox">
+    <label for="checkboxes-0">
+      <input type="checkbox" name="checkboxes" id="checkboxes-0" value="velocity">
+      velocity
+    </label>
+	</div>
+  <div class="checkbox">
+    <label for="checkboxes-1">
+      <input type="checkbox" name="checkboxes" id="checkboxes-1" value="acceleration">
+      acceleration
+    </label>
+	</div>
+  <div class="checkbox">
+    <label for="checkboxes-2">
+      <input type="checkbox" name="checkboxes" id="checkboxes-2" value="force">
+      force
+    </label>
+	</div>
+  <div class="checkbox">
+    <label for="checkboxes-3">
+      <input type="checkbox" name="checkboxes" id="checkboxes-3" value="coordinates">
+      coordinates file
+    </label>
+	</div>
+  <div class="checkbox">
+    <label for="checkboxes-4">
+      <input type="checkbox" name="checkboxes" id="checkboxes-4" value="trajectory">
+      trajectory
+    </label>
+	</div>
+  </div>
+</div>
+
+<!-- Multiple Radios -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="radios">Units</label>
+  <div class="col-md-4">
+  <div class="radio">
+    <label for="radios-0">
+      <input type="radio" name="radios" id="radios-0" value="1" checked="checked">
+      m/s
+    </label>
+	</div>
+  <div class="radio">
+    <label for="radios-1">
+      <input type="radio" name="radios" id="radios-1" value="0">
+      mph
+    </label>
+	</div>
+  </div>
+</div>
+
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="submit"></label>
+  <div class="col-md-4">
+
+    <input type="submit" class="btn btn-info" value="Submit">
+  </div>
+</div>
+
+</fieldset>
+</form>
+
+
+
+{#<form id="id-exampleForm" method="post" enctype="multipart/form-data"><input type='hidden'#}
+{#                                                                                                 name='csrfmiddlewaretoken'#}
+{#                                                                                                 value='BDn9udiOP9M6dil3BRQDhWjj0ZMaaxai'/>#}
+{#<div id="centered">#}
+{##}
+{#    <div id="div_id_docfile" class="form-group"><label for="id_docfile" class="control-label  requiredField">#}
+{#        Select a file<span class="asteriskField">*</span> </label>#}
+{##}
+{#        <div class="controls "><input class="clearablefileinput" id="id_docfile" name="docfile" type="file"/></div>#}
+{#    </div>#}
+{#    <div id="div_id_mass" class="form-group">#}
+{#        <label for="id_mass" class="control-label  requiredField">Mass<span class="asteriskField">*</span> </label>#}
+{##}
+{#        <div class="controls "><input class="textinput textInput form-control" id="id_mass" maxlength="256" name="mass" type="text"/></div>#}
+{#    </div>#}
+{#    <div class="form-group">#}
+{#        <div id="div_id_velocity" class="checkbox"><label for="id_velocity" class=""> <input#}
+{#                class="checkboxinput checkbox" id="id_velocity" name="velocity" type="checkbox"/>#}
+{#            Velocity#}
+{##}
+{##}
+{#        </label></div>#}
+{#    </div>#}
+{#    <div class="form-group">#}
+{#        <div id="div_id_acceleration" class="checkbox"><label for="id_acceleration" class=""> <input#}
+{#                class="checkboxinput checkbox" id="id_acceleration" name="acceleration" type="checkbox"/>#}
+{#            Acceleration#}
+{##}
+{##}
+{#        </label></div>#}
+{#    </div>#}
+{#    <div class="form-group">#}
+{#        <div id="div_id_force" class="checkbox"><label for="id_force" class=""> <input class="checkboxinput checkbox"#}
+{#                                                                                       id="id_force" name="force"#}
+{#                                                                                       type="checkbox"/>#}
+{#            Force#}
+{##}
+{##}
+{#        </label></div>#}
+{#    </div>#}
+{#    <div class="form-group">#}
+{#        <div id="div_id_coordinates" class="checkbox"><label for="id_coordinates" class=""> <input#}
+{#                class="checkboxinput checkbox" id="id_coordinates" name="coordinates" type="checkbox"/>#}
+{#            Coordinates#}
+{##}
+{##}
+{#        </label></div>#}
+{#    </div>#}
+{#    <div id="div_id_units" class="form-group"><label for="id_units_0" class="control-label  requiredField">#}
+{#        Units<span class="asteriskField">*</span> </label>#}
+{##}
+{#        <div class="controls " id="id-exampleForm" class="form-inline"><label class="radio">#}
+{#            <input type="radio"#}
+{#            checked="checked"#}
+{#            name="units"#}
+{#            id="id_units_1"#}
+{#            value="1">m/s#}
+{#        </label> <label class="radio"> <input type="radio" name="units" id="id_units_2" value="0">mph#}
+{#        </label></div>#}
+{#    </div>#}
+{#    <div class="form-group">#}
+{#        <div id="div_id_trajectory" class="checkbox"><label for="id_trajectory" class=""> <input#}
+{#                class="checkboxinput checkbox" id="id_trajectory" name="trajectory" type="checkbox"/>#}
+{#            Trajectory#}
+{##}
+{##}
+{#        </label></div>#}
+{#    </div>#}
+{#    <div class="form-actions"><input type="submit"#}
+{#                                     name="submit"#}
+{#                                     value="Submit"#}
+{##}
+{#                                     class="btn btn-primary"#}
+{#                                     id="submit-id-submit"#}
+{##}
+{##}
+{#            /></div>#}
+{#</div>#}
+{#</form>#}
+
+
+		<script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+</body>

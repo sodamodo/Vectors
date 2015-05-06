@@ -1097,7 +1097,7 @@ def writeKMLfile(openFilePath,saveFilePath,massInput,var,checkVariable1,checkVar
 
 
 
-        file = open(saveFilePath+"_GoogleEarth_"+str(i)+"_.kml",'w')
+        file = open(saveFilePath+"GoogleEarth.kml", 'w')
     
         ##Coordinate Icon style
         file.write('<?xml version="1.0" encoding="UTF-8"?><kml xmlns="http://www.opengis.net/kml/2.2"><Document>'+'\n'+'\n'+'\n')
@@ -2670,7 +2670,7 @@ def writeCoordinateFile(openFilePath,saveFilePath,massInput,fileVar):
   
     
     check1 = 0
-    file = open(saveFilePath+"_Coordinates.txt",'w')
+    file = open(saveFilePath+"Coordinates.txt",'w')
     file.write("x_Coordinate,y_coordinate,z_coordinate,time_seconds"+"\n")
     ##file.write("x_Coordinate,y_coordinate,z_coordinate,time_seconds,Vx,Vy,Vz,Vtotal,Ax,Ay,Az,Atotal,Fx,Fy,Fz,Ftotal,NetPower,workXlist,workYlist,workZlist,workTotalList, work, KE, PE"+"\n")
 

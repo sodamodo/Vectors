@@ -22,3 +22,7 @@ Primary function parameters:
 check out this KML/KMZ middleware on djangosnippets
 How does one reference custom middleware??????
 going to need to zip before download in case they want coords file
+
+
+Questions for Zac:
+Would having the new files be overwritten over and over pose a potential problem for multiple users? How does django work in that respect?

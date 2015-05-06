@@ -12,9 +12,9 @@ class DocumentForm(forms.Form):
         self.helper.form_id = 'id-exampleForm'
         self.helper.form_class = 'blueForms'
         self.helper.form_method = 'post'
-        self.helper.form_action = 'submit_survey'
-        self.helper.form_class = 'form-horizontal'
-        self.helper.label_class = 'col-md-4'
+        self.helper.form_action = ''
+        self.helper.form_class = 'form-inline'
+        # self.helper.label_class = 'col-md-4'
         # self.helper.field_class = 'col-md-4'
         # self.helper.layout = Layout (
         #     Fieldset (
