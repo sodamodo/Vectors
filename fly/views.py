@@ -7,8 +7,8 @@ from fly.models import Document
 from fly.forms import DocumentForm
 from gps import runCode
 from Vectors.settings import BASE_DIR
-import zipfile
-
+from zipfile import ZipFile
+from django.core.servers.basehttp import FileWrapper
 
 def upload(request):
     # Handle file upload
@@ -57,14 +57,25 @@ def upload(request):
         output_path = ""
         runCode(input_path, output_path, mass, trajectory, velocity, coordinates, acceleration, units, force, fileVar)
 
-        
-        kml_data = open(os.path.join(BASE_DIR, 'GoogleEarth.kml'), "rb")
-        zf = zipfile.ZipFile('processed.zip', mode='w')
 
 
+        # kml_data = open(os.path.join(BASE_DIR, 'GoogleEarth.kml'), "rb")
+        zf = ZipFile('processed.zip', mode='w')
 
-        response = HttpResponse(kml_data, content_type='application/vnd.google-earth.kml+xml')
-        response['Content-Disposition'] = 'attachment; filename=processed.kml'  # make custom download name
+        print 'adding files'
+        zf.write('GoogleEarth.kml')
+        if coordinates == 1:
+            zf.write('Coordinates.txt')
+        # zf.write('GoogleEarth.kml')
+
+
+        zf.close()
+
+        downloadfile = open('processed.zip', 'rb')
+
+
+        response = HttpResponse(FileWrapper(downloadfile), content_type='application/zip')
+        response['Content-Disposition'] = 'attachment; filename=processed.zip'  # make custom download name
         return response
             # return HttpResponseRedirect(reverse('fly.views.upload'))
     else:
