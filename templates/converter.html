@@ -1,0 +1,50 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <link rel="stylesheet/less" href="{% static "converter" %}">
+    <script type="text/javascript" src="{% static "less.js" %}"></script>
+{#    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>#}
+{##}
+{#    <script>#}
+{#    $(".button").click( function() {#}
+{#        $('#id-exampleForm').submit();#}
+{#        });#}
+{#    </script>#}
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+<blockquote>
+            Click the 'Choose File' button and select the properly formatted excel or text file to upload. Enter the mass of
+            Select the checkboxes for which kind of devolved vectors(velocity, acceleration, force) you would like in your KML file.
+            Select the coordinates checkbox if you would also like to receive a text file of the coordinates used.
+
+</blockquote>
+
+<div id="centercol">
+<form id="id-exampleForm"  class="form-horizontal" method="post" enctype="multipart/form-data" action="/converter/"><input type='hidden' name='csrfmiddlewaretoken' value='BDn9udiOP9M6dil3BRQDhWjj0ZMaaxai'/>
+
+        <input id="docfile" name="docfile" class="input-file" type="file">
+        Mass (kg) <input id="mass" name="mass" type="text" placeholder="" required="" style="width:50px;">
+        Velocity<input type="checkbox" name="checkboxes" id="velocity" value="velocity">
+        Acceleration<input type="checkbox" name="checkboxes" id="acceleration" value="acceleration">
+        Force<input type="checkbox" name="checkboxes" id="force" value="force">
+        Coordinates<input type="checkbox" name="checkboxes" id="checkboxes-3" value="coordinates">
+        <input type="submit" name="submit" value="submit" id="Submit"/>
+
+
+
+</form>
+
+</div>
+
+{#<div class="button">#}
+{#Hiii#}
+{#</div>#}
+
+
+
+</body>
+</html>

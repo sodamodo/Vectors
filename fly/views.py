@@ -10,7 +10,7 @@ from Vectors.settings import BASE_DIR
 from zipfile import ZipFile
 from django.core.servers.basehttp import FileWrapper
 
-def upload(request):
+def converter(request):
     # Handle file upload
     velocity = 0
     acceleration = 0
@@ -79,5 +79,11 @@ def upload(request):
         return response
             # return HttpResponseRedirect(reverse('fly.views.upload'))
     else:
-        return render(request, 'upload.html', {'wrongfile': wrongfiletag})
+        return render(request, 'converter.html', {'wrongfile': wrongfiletag})
 
+
+def pretty(request):
+    return render(request, 'pretty.html')
+
+# def converter(request):
+#     return render(request, 'converter.html')

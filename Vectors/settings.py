@@ -94,6 +94,10 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # Examples: "http://media.lawrence.com/media/", "http://example.com/media/"
 MEDIA_URL = '/media/'
 
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, "static"),
+)
+
 TEMPLATE_DIRS = (
     "C:/WebProjects/Vectors/templates",
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".

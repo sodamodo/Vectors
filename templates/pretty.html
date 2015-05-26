@@ -1,0 +1,44 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <link rel="stylesheet/less" href="{% static "style" %}">
+    <script type="text/javascript" src="{% static "less.js" %}"></script>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+</head>
+<body>
+
+
+<div id="centercol"><h1>Physics Vector Converter</h1>
+
+    <blockquote>
+This web application allows you to upload a spreadsheet or text file with GPS and have it converted into a Google Earth file that
+displays the linear path that the GPS unit has traveled as well as devolve the path into a series of vectors for speed, acceleration, and force
+    </blockquote>
+
+    <div><img src={% static "sattelite.png" %}></div>
+
+    <div class="row">
+
+        <div id="instructions" class="column"><a href="/instructions/"></a>Instructions</div>
+        <div id="converter" class="column">Converter</div>
+    </div>
+
+</div>
+{##}
+{#<script>#}
+{#$(document).ready(function() {#}
+{#  $("#clicker").click(function () {#}
+{#    alert("Hello!");#}
+{#    $(".hide_div").hide();#}
+{#  });#}
+{#});#}
+
+<script>
+
+</script>
+
+</body>
+</html>
