@@ -1,0 +1,31 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <link rel="stylesheet/less" href="{% static "frontpage" %}">
+    <script type="text/javascript" src="{% static "less.js" %}"></script>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+
+<div class="wrapper">
+  <header class="header">Header</header>
+  <article class="main">
+      <ul>
+          <li>The GPS unit captures the 3-D time varying position vector of real world motion i.e. (x,y,z, t)</li>
+          <li>If the time varying position vector is known, all the kinematics of the motion can be unfolded</li>
+          <li>if the position(?) and time varying vector are known the dynamics and energetics can be unfolded</li>
+      </ul>
+  </article>
+  <aside class="aside aside-1">
+      <div class="menuitems">About</div>
+      <div class="menuitems">Data format</div>
+      <div class="menuitems">Examples</div>
+      <div class="menuitems">Credits</div>
+  </aside>
+  <aside class="aside aside-2">Aside 2</aside>
+  <footer class="footer">Footer</footer>
+</div>
+
+</body>
+</html>

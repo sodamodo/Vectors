@@ -82,8 +82,11 @@ def converter(request):
         return render(request, 'converter.html', {'wrongfile': wrongfiletag})
 
 
-def pretty(request):
-    return render(request, 'pretty.html')
+def frontpage(request):
+    return render(request, 'frontpage.html')
 
-# def converter(request):
-#     return render(request, 'converter.html')
+def converter(request):
+    return render(request, 'converter.html')
+
+def format(request):
+    return render(request, 'format.html')
