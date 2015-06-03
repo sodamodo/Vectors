@@ -2,30 +2,206 @@
 <!DOCTYPE html>
 <html>
 <head lang="en">
-    <link rel="stylesheet/less" href="{% static "frontpage" %}">
-    <script type="text/javascript" src="{% static "less.js" %}"></script>
+{#    <link rel="stylesheet/less" href="{% static "frontpage" %}">#}
+{#    <link rel="stylesheet" type="text/css" href="{% static "cascadeframework-master\assets\css\cascade\production\build-full.min.css" %}">#}
+{#    <link rel="stylesheet" type="text/css" href="{% static "cascadeframework-master\assets\css\cascade\production\core.css" %}">#}
+{#    <link rel="stylesheet" type="text/css" media="all"  href={% static "cascadeframework-master\assets\css\site.css" %}/>#}
+{#    <script type="text/javascript" src="{% static "cascadeframework-master\assets\js\site\base.js" %}"></script>#}
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
-</head>
+      <style>
 
-<div class="wrapper">
-  <header class="header">Header</header>
-  <article class="main">
-      <ul>
+   div {
+{#       border: dashed 1px black;#}
+   }
+
+   img {
+     margin-left: auto;
+     margin-right: auto;
+   }
+   .links {
+       background-color: tomato;
+   }
+
+  li {
+      text-align: center;
+      font-size: 20px;
+      padding-top: 15px;
+  }
+  .button {
+      padding:10px;
+  }
+  .formo {
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left:10;
+      padding-right:10;
+  }
+
+  </style>
+</head>
+{#        <img src="{% static "UNG_Banner.png" %}" height=100 width=400>#}
+<body>
+
+<div class="pure-g">
+    <div class="pure-u-1" style="background-color: green"><h1>Banner Image Goes Here</h1></div>
+</div>
+
+<div class="pure-g">
+    <div class="pure-u-1-2" style="background-color: purple"><h1>GPS-Physics</h1></div>
+    <div class="pure-u-1-2" style="background-color: cornflowerblue "><h2>Real world motion as a laboratory for experimental learning and mechanics</h2></div>
+</div>
+
+<div class="pure-g" style="background-color: blue">
+    <div class="pure-u-4-24">
+        <div class="button"><a class="pure-button" href="#">About</a></div>
+        <div class="button"><a class="pure-button" href="#">Data Format</a></div>
+        <div class="button"><a class="pure-button" href="#">Examples</a></div>
+        <div class="button"><a class="pure-button" href="#">Credits</a></div>
+
+
+
+
+
+    </div>
+
+    <div class="pure-u-13-24" style="background-color: orange">
           <li>The GPS unit captures the 3-D time varying position vector of real world motion i.e. (x,y,z, t)</li>
           <li>If the time varying position vector is known, all the kinematics of the motion can be unfolded</li>
           <li>if the position(?) and time varying vector are known the dynamics and energetics can be unfolded</li>
-      </ul>
-  </article>
-  <aside class="aside aside-1">
-      <div class="menuitems">About</div>
-      <div class="menuitems">Data format</div>
-      <div class="menuitems">Examples</div>
-      <div class="menuitems">Credits</div>
-  </aside>
-  <aside class="aside aside-2">Aside 2</aside>
-  <footer class="footer">Footer</footer>
+    </div>
+
+    <div class="pure-u-7-24 formo" style="background-color:deeppink">
+
+        <form id="id-exampleForm"  class="pure-form pure-form-stacked" method="post" enctype="multipart/form-data" action="/converter/">
+            <fieldset>
+
+            <input type='hidden' name='csrfmiddlewaretoken' value='BDn9udiOP9M6dil3BRQDhWjj0ZMaaxai'/>
+
+            <legend>GPS Trace to KML Conversion Form</legend>
+
+            <label for="docfile">File Upload:<input id="docfile" name="docfile" class="input-file" type="file"></label>
+
+
+            <label for="mass">Mass (kg)<input id="mass" name="mass" type="text" placeholder="" required="" style="width:50px;"></label>
+
+
+            <label for="velocity"><input type="checkbox" name="checkboxes" id="velocity" value="velocity">Velocity</label>
+
+
+            <label for="acceleration"><input type="checkbox" name="checkboxes" id="acceleration" value="acceleration">Acceleration</label>
+
+
+            <label for="force"><input type="checkbox" name="checkboxes" id="force" value="force">Force</label>
+
+
+            <label for="checkboxes-3" class="pure-checkbox"><input type="checkbox" name="checkboxes" id="checkboxes-3" value="coordinates">Coordinates</label>
+
+
+            <input type="submit" class="pure-button pure-button-primary" name="submit" value="submit" id="Submit"/>
+
+            </fieldset>
+        </form>
+
+    </div>
 </div>
 
 </body>
 </html>
+{##}
+{#<div class="my-container" style="margin-top: 30px;">#}
+{#    <section>#}
+{#    <div class="col width-fill">#}
+{#        <div class="col width-1of2">#}
+{#            GPS-Physics#}
+{#        </div>#}
+{##}
+{#        <div class="col width-fill">#}
+{#            Real world motion as a laboratory for experimental learning and mechanics#}
+{#        </div>#}
+{#    </div>#}
+{#    <div class="cell">#}
+{#        <div class="col width-2of12">#}
+{#                <div class="cell">About</div>#}
+{#                <div class="cell">Data Format</div>#}
+{#                <div class="cell">Examples</div>#}
+{#                <div class="cell">Credits</div>#}
+{#        </div>#}
+{##}
+{#        <div class="col width-5of12">#}
+{#          <li>The GPS unit captures the 3-D time varying position vector of real world motion i.e. (x,y,z, t)</li>#}
+{#          <li>If the time varying position vector is known, all the kinematics of the motion can be unfolded</li>#}
+{#          <li>if the position(?) and time varying vector are known the dynamics and energetics can be unfolded</li>#}
+{#        </div>#}
+{#    </div>#}
+{#</div>#}
+
+
+
+
+{#    <div class="site-center">#}
+{#            <div class="site-body">#}
+{#                <div class="site-header">#}
+{#                <img src="{% static "UNG_Banner.png" %}" height=100 width=400 style="margin-left: auto; margin-right: auto">#}
+{#                </div>#}
+{#            </div>#}
+{#    </div>#}
+
+
+{#<div class="wrapper">#}
+{#  <header class="header"><img src="{% static "UNG_Banner.png" %}"></header>#}
+{##}
+{#    <div>#}
+{#    <article class="subheader-1" style="background-color:green">GPS -- Physics</article>#}
+{#    <article class="subheader-2" style="background-color:orange">Real world motion as a laboratory for experimental learning and mechanics</article>#}
+{#    </div>#}
+{#  <article class="main" style="background-color:purple">Hello there</article>#}
+{#  <article class="main">#}
+{#      <ul>#}
+{#          <li>The GPS unit captures the 3-D time varying position vector of real world motion i.e. (x,y,z, t)</li>#}
+{#          <li>If the time varying position vector is known, all the kinematics of the motion can be unfolded</li>#}
+{#          <li>if the position(?) and time varying vector are known the dynamics and energetics can be unfolded</li>#}
+{#      </ul>#}
+{#  </article>#}
+{##}
+{##}
+{#  <aside class="aside aside-1">#}
+{#      <div class="menuitems">About</div>#}
+{#      <div class="menuitems">Data format</div>#}
+{#      <div class="menuitems">Examples</div>#}
+{#      <div class="menuitems">Credits</div>#}
+{#  </aside>#}
+{#  <aside class="aside aside-2">Aside 2</aside>#}
+{#  <footer class="footer">Footer</footer>#}
+{#</div>#}
+
+
+
+{#<div class="my-container">#}
+{#    <div class='col'>#}
+{##}
+{#<div class='col size3of12'>#}
+{#<span class='label'>Inside div.col.size3of12</span>#}
+{#</div>#}
+{##}
+{#<div class='col size7of12'>#}
+{#<div class='cell panel'>#}
+{#<div class='header background-green'>#}
+{#My Small Tutorial#}
+{#</div>#}
+{#<div class='body'>#}
+{#<div class='cell'>Author: Sandeep Kumar Patel</div>#}
+{#</div>#}
+{#</div>#}
+{#</div>#}
+{##}
+{#<div class='col size2of12'>#}
+{#<span class='label background-blue'>Inside div.col.size2of12</span>#}
+{#</div>#}
+{##}
+{#</div>#}
+{#Read more at http://www.tutorialsavvy.com/2013/06/exploring-css-cascade-framework.html/#bjwU2A61vSQlXC13.99#}
+{#</div>#}
+
