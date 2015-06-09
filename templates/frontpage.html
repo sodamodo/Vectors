@@ -12,10 +12,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
       <style>
+
+     body {
+         background-color:#3F244E;
+     }
+
     .wrapper {
         width:90%;
         margin-left:auto;
         margin-right:auto;
+        border: dashed 1px black;
     }
    div {
 {#       border: dashed 1px black;#}
@@ -37,8 +43,8 @@
        margin-top: 20%;
 
    }
-   .links {
-       background-color: tomato;
+   #links {
+       background-color: #882D61;
    }
 
   li {
@@ -47,13 +53,28 @@
       padding-top: 15px;
   }
   .button {
-      padding:10px;
+      padding:18px;
   }
-  .formo {
+  .form {
       padding-top: 10px;
       padding-bottom: 10px;
       padding-left:10;
       padding-right:10;
+  }
+
+  #format {
+      background-color: white;
+      height: 35%;
+      position: absolute;
+      bottom:0;
+{#      text-align: center;#}
+      font-size:18px;
+
+  }
+
+  #points {
+    position: relative;
+    background-color: #9BD030;
   }
 
   </style>
@@ -63,36 +84,40 @@
 <div class="wrapper">
     <div class="pure-g">
         <div class="pure-u-1-1" ><img id="banner" src="{% static "UNG_Banner.png" %}"></div>
-{#        style="background-color: green"#}
     </div>
 
     <div class="pure-g">
 
-        <div class="pure-u-1-1" style="background-color: cornflowerblue;; "><h2>Real world motion as a laboratory for experimental learning and mechanics</h2></div>
-        <div class="pure-u-1-2" style="background-color: purple; text-align: center;" ><h1>GPS-Physics</h1></div>
-        <div class="pure-u-1-2" style="background-color: red;; "><h2>Real world motion as a laboratory for experimental learning and mechanics</h2></div>
+{#        <div class="pure-u-1-1" style="background-color: cornflowerblue; text-align:center; "><h2>Real world motion as a laboratory for experiential learning and mechanics</h2></div>#}
+        <div class="pure-u-10-24" style="background-color: #304797; text-align: center; " ><h1>GPS-Physics</h1></div>
+        <div class="pure-u-14-24" style="background-color: red; text-align: center;"><h3>Real world motion as a laboratory for experiential learning and mechanics</h3></div>
     </div>
 
-    <div class="pure-g" style="background-color: blue">
+    <div class="pure-g" id="links" style="background-color: #882D61;">
         <div class="pure-u-3-24">
             <div class="button"><a class="pure-button" href="#">About</a></div>
-            <div class="button"><a class="pure-button" href="#">Data Format</a></div>
+            <div class="button"><a class="pure-button" href="/format/">Data Format</a></div>
             <div class="button"><a class="pure-button" href="#">Examples</a></div>
             <div class="button"><a class="pure-button" href="#">Credits</a></div>
 
         </div>
 
-        <div class="pure-u-10-24" style="background-color: orange">
+        <div class="pure-u-10-24" id="points">
               <li>The GPS unit captures the 3-D time varying position vector of real world motion i.e. (x,y,z, t)</li>
               <li>If the time varying position vector is known, all the kinematics of the motion can be unfolded</li>
-              <li>if the position(?) and time varying vector are known the dynamics and energetics can be unfolded</li>
+              <li>if the position and time varying vector are known the dynamics and energetics can be unfolded</li>
+            <div id="format">
+                <center><u>Formatting</u></center>
+            Upload a an GPS track file in excel or .txt file format and input the mass, the software will convert it to a KML displaying the original
+            and the developed speed, acceleration, and force vectors
+            </div>
         </div>
 
         <div class="pure-u-5-24">
             <img id="coords" src="{% static "coords.png" %}">
         </div>
 
-        <div class="pure-u-6-24" style="background-color:deeppink;">
+        <div class="pure-u-6-24" style="background-color:white;">
 
             <form id="id-exampleForm"  class="pure-form pure-form-stacked"  method="post" enctype="multipart/form-data" action="/converter/">
                 <fieldset>
