@@ -3,10 +3,8 @@
 <html>
 <head lang="en">
 {#    <link rel="stylesheet/less" href="{% static "frontpage" %}">#}
-{#    <link rel="stylesheet" type="text/css" href="{% static "cascadeframework-master\assets\css\cascade\production\build-full.min.css" %}">#}
-{#    <link rel="stylesheet" type="text/css" href="{% static "cascadeframework-master\assets\css\cascade\production\core.css" %}">#}
-{#    <link rel="stylesheet" type="text/css" media="all"  href={% static "cascadeframework-master\assets\css\site.css" %}/>#}
-{#    <script type="text/javascript" src="{% static "cascadeframework-master\assets\js\site\base.js" %}"></script>#}
+
+
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -44,7 +42,7 @@
 
    }
    #links {
-       background-color: #882D61;
+       background-color: #BF6D9C;
    }
 
   li {
@@ -63,7 +61,7 @@
   }
 
   #format {
-      background-color: white;
+      background-color: #BF6D9C;
       height: 35%;
       position: absolute;
       bottom:0;
@@ -74,7 +72,7 @@
 
   #points {
     position: relative;
-    background-color: #9BD030;
+    background-color: #BF6D9C;
   }
 
   </style>
@@ -93,12 +91,16 @@
         <div class="pure-u-14-24" style="background-color: red; text-align: center;"><h3>Real world motion as a laboratory for experiential learning and mechanics</h3></div>
     </div>
 
-    <div class="pure-g" id="links" style="background-color: #882D61;">
+    <div class="pure-g" id="links" style="background-color: #BF6D9C;">
         <div class="pure-u-3-24">
             <div class="button"><a class="pure-button" href="#">About</a></div>
             <div class="button"><a class="pure-button" href="/format/">Data Format</a></div>
             <div class="button"><a class="pure-button" href="#">Examples</a></div>
             <div class="button"><a class="pure-button" href="#">Credits</a></div>
+
+
+
+
 
         </div>
 
@@ -117,7 +119,7 @@
             <img id="coords" src="{% static "coords.png" %}">
         </div>
 
-        <div class="pure-u-6-24" style="background-color:white;">
+        <div class="pure-u-6-24" style="background-color:#BF6D9C;">
 
             <form id="id-exampleForm"  class="pure-form pure-form-stacked"  method="post" enctype="multipart/form-data" action="/converter/">
                 <fieldset>
