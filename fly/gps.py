@@ -1,4 +1,3 @@
-from Tkinter import *
 import math
 import tkMessageBox
 from tkFileDialog import askopenfilename, asksaveasfilename

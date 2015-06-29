@@ -7,8 +7,6 @@
 
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
       <style>
 
      body {
@@ -19,7 +17,7 @@
         width:90%;
         margin-left:auto;
         margin-right:auto;
-        border: dashed 1px black;
+{#        border: dashed 1px black;#}
     }
    div {
 
@@ -89,15 +87,15 @@
 
 {#        <div class="pure-u-1-1" style="background-color: cornflowerblue; text-align:center; "><h2>Real world motion as a laboratory for experiential learning and mechanics</h2></div>#}
         <div class="pure-u-10-24" style="background-color: #304797; text-align: center; border-radius: 8px 0px 0px 8px; " ><h1>GPS-Physics</h1></div>
-        <div class="pure-u-14-24" style="background-color: red; text-align: center; font-size: 17px; padding-top:10px; border-radius: 0px 8px 8px 0px;"><h3>Real world motion as a laboratory for experiential learning and mechanics</h3></div>
+        <div class="pure-u-14-24" style="background-color: #146AE3; text-align: center; font-size: 17px; padding-top:10px; border-radius: 0px 8px 8px 0px;"><h3>Real world motion as a laboratory for experiential learning and mechanics</h3></div>
     </div>
 
     <div class="pure-g" id="links" style="background-color: #BF6D9C;">
         <div class="pure-u-3-24">
-            <div class="button"><a class="pure-button" href="#">About</a></div>
+            <div class="button"><a class="pure-button" href="/about/">About</a></div>
             <div class="button"><a class="pure-button" href="/format/">Data Format</a></div>
-            <div class="button"><a class="pure-button" href="#">Examples</a></div>
-            <div class="button"><a class="pure-button" href="#">Credits</a></div>
+            <div class="button"><a class="pure-button" href="/examples/">Examples</a></div>
+            <div class="button"><a class="pure-button" href="/credits/">Credits</a></div>
 
 
 
@@ -123,10 +121,8 @@
         <div class="pure-u-6-24" style="background-color:#BF6D9C; border-radius: 0px 8px 8px 0px;">
 
             <form id="id-exampleForm"  class="pure-form pure-form-stacked"  method="post" enctype="multipart/form-data" action="/converter/">
+               {% csrf_token %}
                 <fieldset>
-
-                <input type='hidden' name='csrfmiddlewaretoken' value='BDn9udiOP9M6dil3BRQDhWjj0ZMaaxai'/>
-
                 <legend>GPS Trace to KML Conversion Form</legend>
 
 

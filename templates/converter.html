@@ -25,7 +25,8 @@
 
 <div id="centercol">
 <form id="id-exampleForm"  class="form-horizontal" method="post" enctype="multipart/form-data" action="/converter/">
-        <input type='hidden' name='csrfmiddlewaretoken' value='BDn9udiOP9M6dil3BRQDhWjj0ZMaaxai'/>
+                   {% csrf_token %}
+
         <input id="docfile" name="docfile" class="input-file" type="file">
         Mass (kg) <input id="mass" name="mass" type="text" placeholder="" required="" style="width:50px;">
         Velocity<input type="checkbox" name="checkboxes" id="velocity" value="velocity">

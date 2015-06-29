@@ -1,0 +1,23 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+<head lang="en">
+
+    <link rel="stylesheet/less" href="{% static "format" %}">
+    <script type="text/javascript" src="{% static "less.js" %}"></script>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div id="centercol">
+    <h2>Example pre-rendered KMLs</h2>
+</div>
+
+<div id="centercol">
+    <h2><a href="{% static "Terrestrial.kml" %}" download>Terrestrial track</a></h2>
+
+    <h2><a href="{% static "Aerial.kml" %}" download>Aerial track</a></h2>
+</div>
+</body>
+</html>

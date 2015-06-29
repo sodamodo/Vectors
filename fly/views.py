@@ -31,7 +31,7 @@ def converter(request):
             fileVar = 3
         else:
             wrongfiletag = "Sorry you can only upload Excel files or Text files"
-            return render(request, 'upload.html', {'wrongfile': wrongfiletag})
+            return render(request, 'frongpage.html', {'wrongfile': wrongfiletag})
 
 
         listo = request.POST.getlist('checkboxes', 0)
@@ -79,14 +79,24 @@ def converter(request):
         return response
             # return HttpResponseRedirect(reverse('fly.views.upload'))
     else:
-        return render(request, 'converter.html', {'wrongfile': wrongfiletag})
+        return render(request, 'frontpage.html')
+    # {'wrongfile': wrongfiletag}
 
 
 def frontpage(request):
     return render(request, 'frontpage.html')
 
-def converter(request):
-    return render(request, 'converter.html')
+# def converter(request):
+#     return render(request, 'converter.html')
 
 def format(request):
     return render(request, 'format.html')
+
+def examples(request):
+    return render(request, 'examples.html')
+
+def credits(request):
+    return render(request, 'credits.html')
+
+def about(request):
+    return render(request, 'about.html')
