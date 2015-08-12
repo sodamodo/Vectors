@@ -4,7 +4,7 @@ from tkFileDialog import askopenfilename, asksaveasfilename
 from decimal import *
 import tkFont
 import xlrd
-
+from Tkinter import *
 
 ###GUI OF SOFTWARE
 class GUIFramework(Frame):
