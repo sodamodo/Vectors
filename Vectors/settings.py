@@ -86,7 +86,7 @@ USE_TZ = True
 
 STATIC_URL = '/files/'
 
-STATIC_ROOT = '/static_root/'
+STATIC_ROOT = os.path.join(BASE_DIR, '/static_root/')
 
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/home/media/media.lawrence.com/media/"
