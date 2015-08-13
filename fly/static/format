@@ -1,0 +1,29 @@
+@dblue: #0099CC;
+@lblue: #66CCFF;
+@purple: #3F244E;
+@maroon: #882D61;
+
+div {
+  border-radius: 10px;
+  border: black 1px solid;
+}
+
+body {
+  background-color:@purple;
+}
+
+#centercol {
+
+  width:60%;
+  background-color:@maroon;
+  margin: 30px auto 0 auto;
+  text-align: center;
+}
+
+blockquote {
+  border-style: dashed;
+  margin: 30px auto;
+  width: 30%;
+  font-size: 20px;
+
+}

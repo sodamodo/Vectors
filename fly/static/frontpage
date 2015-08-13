@@ -1,0 +1,43 @@
+   .wrapper {
+        width:90%;
+        margin-left:auto;
+        margin-right:auto;
+    }
+   div {
+//       border: dashed 1px black;
+   }
+
+   #banner {
+     padding-left: 30%;
+     padding-right: 30%;
+     padding-top: 10px;
+     padding-bottom:10px;
+     width:45%;
+   }
+
+   #coords {
+       width:80%;
+       height:80%;
+       margin-left:10%;
+       margin-right:10%;
+       margin-top: 20%;
+
+   }
+   .links {
+       background-color: tomato;
+   }
+
+  li {
+      text-align: center;
+      font-size: 20px;
+      padding-top: 15px;
+  }
+  .button {
+      padding:10px;
+  }
+  .formo {
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left:10;
+      padding-right:10;
+  }

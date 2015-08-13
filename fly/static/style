@@ -1,0 +1,55 @@
+@dblue: #0099CC;
+@lblue: #66CCFF;
+
+
+div {
+  border-radius: 10px;
+//  border: black 1px solid;
+}
+
+body {
+  background-color:#CAE5FF;
+}
+
+#centercol {
+  width:60%;
+  background-color:@dblue;
+  margin: 0 auto;
+  text-align: center;
+}
+
+blockquote {
+  border-style: dashed;
+  margin: 0 auto;
+  width: 70%;
+  font-size: 25px;
+}
+
+#blankbox {
+  width:300px;
+  height:200px;
+}
+
+.row
+{
+    display: table;
+    width: 70%;
+    table-layout: fixed;
+    border-spacing: 20px;
+    margin: 20px auto 0 auto;
+
+}
+.column
+{
+    margin-top:50px;
+    display: table-cell;
+    background-color: #DCDCDC;
+    font-size: 50px;
+    font-family: "Lucida Grande", "DejaVu Sans", "Bitstream Vera Sans", Verdana, Arial, sans-serif;
+
+
+}
+
+img {
+  margin: 30px auto 10px auto;
+}
