@@ -2,7 +2,6 @@
 <!DOCTYPE html>
 <html>
 <head lang="en">
-{#    <link rel="stylesheet/less" href="{% static "frontpage" %}">#}
 
 
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
@@ -17,7 +16,7 @@
         width:90%;
         margin-left:auto;
         margin-right:auto;
-{#        border: dashed 1px black;#}
+        border: dashed 1px black;
     }
    div {
 
@@ -64,7 +63,7 @@
       height: 35%;
       position: absolute;
       bottom:0;
-{#      text-align: center;#}
+      text-align: center;
       font-size:18px;
 
   }
@@ -76,17 +75,14 @@
 
   </style>
 </head>
-{#        <img src="{% static "UNG_Banner.png" %}" height=100 width=400>#}
 <body>
 <div class="wrapper">
     <div class="pure-g">
-{#        <div class="pure-u-1-1" ><img id="banner" src="{% static "UNG_Banner.png" %}"></div>#}
         <div class="pure-u-1-1" ><img id="banner" src="static/UNG_Banner.png"></div>
     </div>
 
     <div class="pure-g" style="margin-bottom: 30px;">
 
-{#        <div class="pure-u-1-1" style="background-color: cornflowerblue; text-align:center; "><h2>Real world motion as a laboratory for experiential learning and mechanics</h2></div>#}
         <div class="pure-u-10-24" style="background-color: #304797; text-align: center; border-radius: 8px 0px 0px 8px; " ><h1>GPS-Physics</h1></div>
         <div class="pure-u-14-24" style="background-color: #146AE3; text-align: center; font-size: 17px; padding-top:10px; border-radius: 0px 8px 8px 0px;"><h3>Real world motion as a laboratory for experiential learning and mechanics</h3></div>
     </div>
@@ -156,4 +152,111 @@
 </div>
 </body>
 </html>
-
+{##}
+{#<html>#}
+{#<head>#}
+{#<style>#}
+{##}
+{#    body {#}
+{#        font-size:100%;#}
+{#    }#}
+{##}
+{#    #wrapper {#}
+{#        width:80%;#}
+{#        height:100%;#}
+{#        border: 1px solid red;#}
+{#        margin: 0 auto 0 auto;#}
+{#    }#}
+{##}
+{#    #header {#}
+{#       width:100%;#}
+{#       height:20%;#}
+{#       border: 1px solid greenyellow;#}
+{#       margin: 0 auto 0 auto;#}
+{#    }#}
+{##}
+{#    #title {#}
+{#        width: 100%;#}
+{#        border: 1px solid orange;#}
+{#        display: block;#}
+{#        margin-top: 50px;#}
+{#    }#}
+{##}
+{#    #main {#}
+{#        top-margin:40px;#}
+{#        border: 1px solid blue;#}
+{#        display:inline-block;#}
+{#    }#}
+{##}
+{#    button {#}
+{#        margin: 5px 5px 5px 5px;#}
+{#        display:block;#}
+{#    }#}
+{##}
+{#    #links {#}
+{#        display:inline-block;#}
+{#        width:15%;#}
+{#        border: 1px solid green;#}
+{#        margin: auto;#}
+{#        padding-top: 25px;#}
+{#        padding-bottom: 25px;#}
+{#    }#}
+{##}
+{#    #description {#}
+{#        display: inline-block;#}
+{#        width:30%;#}
+{#    }#}
+{##}
+{#    img {#}
+{#        display: block;#}
+{#        margin: 0px auto;#}
+{##}
+{#    }#}
+{##}
+{#    #coords {#}
+{#        width:10%;#}
+{#        display:inline;#}
+{#    }#}
+{#</style>#}
+{#</head>#}
+{##}
+{#<body>#}
+{#<div id="wrapper">#}
+{#    <div id="header">#}
+{#        <img src="{% static "UNG_Banner.png" %}" height=100 width=400>#}
+{#    </div>#}
+{##}
+{#    <div id="title">#}
+{#        <div style="width:30%;  display: inline; font-size:3em">GPS physics</div>#}
+{#        <div style="width:70%;  display: inline; font-size:1.5em">Real world motion as a laboratory for experiential learning and mechanics</div>#}
+{#    </div>#}
+{##}
+{#    <div id="main">#}
+{#        <div id="links">#}
+{#            <button>About</button>#}
+{#            <button>Data Format</button>#}
+{#            <button>Examples</button>#}
+{#            <button>Credits</button>#}
+{#        </div>#}
+{##}
+{#        <div id="description">#}
+{#            <ul>#}
+{#                <li>The GPS unit captures the 3-D time varying position vector of real world motion i.e. (x,y,z, t)</li>#}
+{#                <li>If the time varying position vector is known, all the kinematics of the motion can be unfolded</li>#}
+{#                <li>if the position and time varying vector are known the dynamics and energetics can be unfolded</li>#}
+{#            </ul>#}
+{##}
+{#            Upload a an GPS track file in excel or .txt file format and input the mass, the software will convert it to a KML displaying the original and the developed speed, acceleration, and force vectors#}
+{#        </div>#}
+{##}
+{#        <div id="coords">#}
+{#            <img src="{% static "coords.png" %}" height=200 width=200 style="display:inline">#}
+{##}
+{#        </div>#}
+{#    </div>#}
+{##}
+{#</div>#}
+{##}
+{#</body>#}
+{##}
+{#</html>#}
