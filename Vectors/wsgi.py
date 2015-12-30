@@ -13,5 +13,8 @@ django.setup()
 import os
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "Vectors.settings")
 
+sys.path.append('/home/Vectors')
+sys.path.append('/home/Vectors/Vectors')
+
 from django.core.wsgi import get_wsgi_application
 application = get_wsgi_application()
