@@ -7,7 +7,6 @@ django-registration==2.0.3
 django-rest==0.0.1
 djangorestframework==3.3.2
 feedparser==5.2.1
-GDAL==1.11.3
 geocoder==1.6.4
 lxml==3.4.4
 ratelim==0.1.6
@@ -15,4 +14,3 @@ requests==2.8.1
 six==1.10.0
 untangle==1.1.0
 xlrd==0.9.4
-psycopg2==2.5.3
