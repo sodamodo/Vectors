@@ -1,16 +1,6 @@
 import math
-import tkMessageBox
-from tkFileDialog import askopenfilename, asksaveasfilename
 from decimal import *
-import tkFont
 import xlrd
-from Tkinter import *
-
-
-
-
-
-
 
 
 ###CONNECTING GUI WITH CORE
